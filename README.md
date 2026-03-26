@@ -2,19 +2,47 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# InteriorAI — Умный Дизайн Интерьера
 
-This contains everything you need to run your app locally.
+Проект использует нейросеть (Kie.ai) для автоматического редактирования и генерации дизайна интерьера по текстовому запросу.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1C6gaQaCkExQuxRvJrgnjP97BNOqD-fXs
+## 🚀 Как запустить на чистом Windows
 
-## Run Locally
+Если вы только скачали проект с GitHub на новый компьютер с Windows, выполните следующие шаги:
 
-**Prerequisites:**  Node.js
+### 1. Установите Node.js
+Вам необходима среда выполнения JavaScript. 
+1. Перейдите на сайт [nodejs.org](https://nodejs.org/ru)
+2. Скачайте и установите версию **LTS** (Recommended for most users).
+3. Во время установки везде нажимайте "Далее" (оставьте галочки по умолчанию).
 
+### 2. Подготовьте папку проекта
+Распакуйте скачанный ZIP-архив с GitHub в любую удобную папку (например, на Рабочий стол). Если вы клонировали через `git clone`, просто откройте эту папку.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 3. Запуск терминала (Командной строки)
+Откройте папку с проектом (`interiorai`), нажмите правой кнопкой мыши по пустому месту в папке и выберите:
+- **"Open in Terminal"** (Открыть в Терминале) 
+*Или:* введите `cmd` прямо в адресной строке проводника (там, где написан путь к папке) и нажмите Enter.
+
+### 4. Установка зависимостей
+В открывшейся черной консоли введите команду и нажмите Enter:
+```cmd
+npm install
+```
+*Дождитесь окончания загрузки (появится папка `node_modules`).*
+
+### 5. Настройка API ключа
+Поскольку репозиторий _приватный_, файл `.env.local` уже находится в папке (мы его туда загрузили). 
+Убедитесь, что внутри файла `.env.local` есть ваш ключ для нейросети:
+```
+KIE_API_KEY=ваш_ключ_от_kie_ai
+```
+
+### 6. Запуск проекта
+Введите команду:
+```cmd
+npm run dev
+```
+
+В консоли появится сообщение `➜  Local:   http://localhost:3000/`.
+Откройте браузер, введите адрес `http://localhost:3000` — и пользуйтесь вашим личным ИИ-дизайнером! 🎉
