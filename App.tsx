@@ -288,7 +288,7 @@ const App: React.FC = () => {
                                 { 
                                     icon: <SparklesIcon />,
                                     title: "Генерация", 
-                                    desc: "Gemini 2.5 понимает контекст." 
+                                    desc: "Nano Banana Pro генерирует идеально." 
                                 },
                                 { 
                                     icon: <CheckIcon />,
